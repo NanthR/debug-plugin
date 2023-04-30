@@ -8,6 +8,8 @@ CXXFLAGS += -I$(PLUGINDIR)/include
 
 all: build/print.so check
 
+build: build/print.so
+
 build/print.so: build/print.o
 	$(CXX) $(LDFLAGS) -g -std=c++20 -shared -o $@ $<
 
